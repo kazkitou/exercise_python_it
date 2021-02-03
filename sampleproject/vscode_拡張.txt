@@ -1,0 +1,32 @@
+eamodio.gitlens
+    Visual Studio Codeに組み込まれているGit機能を強化
+    — Gitの注記とコードレンズを介してコードの作成者を一目で視覚化し、
+    Gitリポジトリをシームレスにナビゲートして探索し、
+    強力な比較コマンドを介して価値のある意見を得るなど、さまざまなことができます。
+
+ms-ceintl.vscode-language-pack-ja
+    VSCodeの日本語用言語パック
+
+ms-toolsai.jupyter
+    Jupyter notebookのサポート、Intellisense(入力の自動補完)やデバッグなどのコンピュータ使用をサポートする対話的プログラミング。
+
+yzhang.markdown-all-in-one
+    Markdownを書くために必要なすべて（キーボードショートカット、目次、自動プレビューなど）が1つになったもの
+
+ms-python.vscode-pylance
+    VSCode内のPythonに対しての高性能言語サーバーを提供する
+
+ms-python.python
+    リンティング、デバッグ（マルチスレッド、リモート）、Intellisense、Jupyter Notebook、コードフォーマット、リファクタリング、単体テスト、スニペットなどを行う。
+
+njpwerner.autodocstring
+    Python関数の詳細なdocstringを自動的に生成します
+
+wayou.vscode-todo-highlight
+    TODO、FIXME、およびキーワード、注釈を強調表示します。
+
+visualstudioexptteam.vscodeintellicode
+    開発のAI支援
+
+redhat.vscode-yaml
+    組み込みのKubernetes構文サポートを備えたRedHatによるYAML言語サポート
