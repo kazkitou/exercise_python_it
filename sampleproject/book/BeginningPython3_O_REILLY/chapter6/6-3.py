@@ -1,6 +1,7 @@
-class Thing3():
+class Thing3:
     def __init__(self):
-        self.letters = 'xyz'
+        self.letters = "xyz"
+
 
 obj = Thing3()
 print(obj.letters)

@@ -1,7 +1,8 @@
-'''Project Euler Problem 14'''
+"""Project Euler Problem 14"""
+
 
 def problem_14() -> int:
-    '''Longest Collatz sequence'''
+    """Longest Collatz sequence"""
     ret = 0
     max_len = 0
     for i in range(2, 1000000):
@@ -16,11 +17,13 @@ def problem_14() -> int:
             ret = i
     return ret
 
+
 def collatz_problem(num: int) -> list:
     if num % 2 == 0:
         return num / 2
     else:
         return 3 * num + 1
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_14())

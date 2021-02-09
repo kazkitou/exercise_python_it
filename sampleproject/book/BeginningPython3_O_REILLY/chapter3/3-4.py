@@ -1,2 +1,2 @@
-things = ['mozzarella', 'cinderella', 'salmonella']
+things = ["mozzarella", "cinderella", "salmonella"]
 print(things)

@@ -1,3 +1,3 @@
-things = ['mozzarella', 'cinderella', 'salmonella']
-del(things[things.index('salmonella')])
+things = ["mozzarella", "cinderella", "salmonella"]
+del things[things.index("salmonella")]
 print(things)

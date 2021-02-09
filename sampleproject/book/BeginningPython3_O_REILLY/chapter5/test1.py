@@ -1,1 +1,1 @@
-print('This standalone program works!')
+print("This standalone program works!")

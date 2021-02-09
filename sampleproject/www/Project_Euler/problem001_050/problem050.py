@@ -1,8 +1,9 @@
-'''Project Euler Problem 50'''
+"""Project Euler Problem 50"""
 import math
 
+
 def problem_50() -> int:
-    '''Consecutive prime sum'''
+    """Consecutive prime sum"""
     # 素数の合計した値が素数である数字で1000000未満の最大値を求める
     #   ex) 素数 = 2, 3, 5, ...
     #       項1 = [2]                  : 合計 2    == 素数
@@ -29,16 +30,18 @@ def problem_50() -> int:
                     return sum_prim_num_list[-2]
     return -1
 
+
 def judge_prim_number(num: int) -> bool:
-    '''
-        引数numが素数かどうか判断する
-            True  -> 素数である
-            False -> 素数でない
-    '''
-    for i in range(2, int(math.sqrt(num))+1):
+    """
+    引数numが素数かどうか判断する
+        True  -> 素数である
+        False -> 素数でない
+    """
+    for i in range(2, int(math.sqrt(num)) + 1):
         if num % i == 0:
             return False
     return True
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_50())

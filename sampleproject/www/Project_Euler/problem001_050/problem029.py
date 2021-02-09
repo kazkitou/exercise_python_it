@@ -1,8 +1,9 @@
-'''Project Euler Problem 29'''
+"""Project Euler Problem 29"""
 import math
 
+
 def problem_29() -> int:
-    '''Distinct powers'''
+    """Distinct powers"""
 
     pow_set = set()
     for pow_a in range(2, 101):
@@ -10,5 +11,6 @@ def problem_29() -> int:
             pow_set.add(int(math.pow(pow_a, pow_b)))
     return len(pow_set)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_29())

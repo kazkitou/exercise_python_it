@@ -1,2 +1,3 @@
 import sys
-print('Program arguments:', sys.argv)
+
+print("Program arguments:", sys.argv)

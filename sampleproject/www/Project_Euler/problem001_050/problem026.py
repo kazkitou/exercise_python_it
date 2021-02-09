@@ -1,7 +1,8 @@
-'''Project Euler Problem 26'''
+"""Project Euler Problem 26"""
+
 
 def problem_26() -> int:
-    '''Reciprocal cycles'''
+    """Reciprocal cycles"""
     max_d = 1000
     max_cycle_len = 0
     max_cycle_val = 0
@@ -12,11 +13,12 @@ def problem_26() -> int:
             max_cycle_val = i
     return max_cycle_val
 
+
 def get_reciprocal_cycles_length(num: int) -> int:
-    '''
-        引数numの循環節の長さを返す。
-            割り算した際の余りが同じ -> 以降の計算結果が循環すると考える
-    '''
+    """
+    引数numの循環節の長さを返す。
+        割り算した際の余りが同じ -> 以降の計算結果が循環すると考える
+    """
     cycle_len = 0
     remainder = 1
     remainder_list = list()
@@ -29,5 +31,6 @@ def get_reciprocal_cycles_length(num: int) -> int:
     cycle_len = len(remainder_list) - remainder_list.index(remainder)
     return cycle_len
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_26())

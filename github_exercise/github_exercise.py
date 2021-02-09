@@ -1,4 +1,4 @@
-'''GitHub Exercise Python File'''
+"""GitHub Exercise Python File"""
 
-if __name__ == '__main__':
-    print('GitHub Exercise Print Message')
+if __name__ == "__main__":
+    print("GitHub Exercise Print Message")

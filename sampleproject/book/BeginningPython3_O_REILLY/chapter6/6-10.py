@@ -1,24 +1,31 @@
-class Laser():
+class Laser:
     def does(self):
-        return 'disintegrate'
+        return "disintegrate"
 
-class Claw():
+
+class Claw:
     def does(self):
-        return 'crush'
+        return "crush"
 
-class SmartPhone():
+
+class SmartPhone:
     def does(self):
-        return 'ring'
+        return "ring"
 
-class Robot():
+
+class Robot:
     def __init__(self):
         self.laser = Laser()
         self.claw = Claw()
         self.s_phone = SmartPhone()
 
     def does(self):
-        return 'Robot.Laser does {}\nRobot.Claw does {}\nRobot.SmartPhone does {}'\
-            .format(self.laser.does(), self.claw.does(), self.s_phone.does())
+        return (
+            "Robot.Laser does {}\nRobot.Claw does {}\nRobot.SmartPhone does {}".format(
+                self.laser.does(), self.claw.does(), self.s_phone.does()
+            )
+        )
+
 
 robot = Robot()
 print(robot.does())

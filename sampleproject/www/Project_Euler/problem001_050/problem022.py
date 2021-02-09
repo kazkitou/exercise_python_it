@@ -1,17 +1,18 @@
-'''Project Euler Problem 22'''
+"""Project Euler Problem 22"""
+
 
 def problem_22() -> int:
-    '''	Names scores'''
+    """	Names scores"""
     # nameファイル読み出し
     read_name_txt = list()
-    with open('names.txt', 'rt') as file_p:
-        read_name_txt = file_p.read().split(',')
+    with open("names.txt", "rt") as file_p:
+        read_name_txt = file_p.read().split(",")
     read_name_txt.sort()
 
     # 辞書作成
     alphabet_rating = {}
     alpha_count = 1
-    for alpha in range(ord('A'), ord('Z')+1):
+    for alpha in range(ord("A"), ord("Z") + 1):
         alphabet_rating[chr(alpha)] = alpha_count
         alpha_count += 1
 
@@ -29,5 +30,6 @@ def problem_22() -> int:
 
     return all_score
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_22())

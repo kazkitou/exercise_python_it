@@ -1,15 +1,18 @@
-'''Project Euler Problem 33'''
+"""Project Euler Problem 33"""
+
 
 def problem_33() -> int:
-    '''Digit cancelling fractions'''
+    """Digit cancelling fractions"""
     funny_fraction_list = list()
     for div_mother in range(10, 100):
         for div_child in range(10, div_mother):
             # 自明である or 自明でない ----> 約分した結果に等しい or 等しくない
-            for calc_div_child, calc_div_mother\
-                in get_pattern_simple_funny_fraction(div_child, div_mother):
-                if judge_funny_fraction(div_child, div_mother,
-                                        calc_div_child, calc_div_mother):
+            for calc_div_child, calc_div_mother in get_pattern_simple_funny_fraction(
+                div_child, div_mother
+            ):
+                if judge_funny_fraction(
+                    div_child, div_mother, calc_div_child, calc_div_mother
+                ):
                     funny_fraction_list.append([div_child, div_mother])
     # 面白い分数の分子, 分母の積を算出
     ret_child = 1
@@ -25,10 +28,11 @@ def problem_33() -> int:
             break
     return ret_mother
 
+
 def get_pattern_simple_funny_fraction(div_child: int, div_mother: int) -> list:
-    '''
-        簡単な形にすることのできる分数に対して、今後に計算が必要なパターンを返す
-    '''
+    """
+    簡単な形にすることのできる分数に対して、今後に計算が必要なパターンを返す
+    """
     ret = list()
     # 自明である or 自明でない ----> 約分した結果に等しい or 等しくない
     # a*/a* -> 値の等しい桁が分子、分母でそれぞれ1, 1
@@ -45,19 +49,26 @@ def get_pattern_simple_funny_fraction(div_child: int, div_mother: int) -> list:
         ret.append([div_child % 10, div_mother % 10])
     return ret
 
-def judge_funny_fraction(div_child: int, div_mother: int,
-                            div_child_fny: int, div_mother_fny: int, ) -> bool:
-    '''
-        面白い分数であるか判断する。（Project Euler Problem 33を参照）
-            True  -> 面白い分数である
-            False -> 面白い分数でない
-    '''
+
+def judge_funny_fraction(
+    div_child: int,
+    div_mother: int,
+    div_child_fny: int,
+    div_mother_fny: int,
+) -> bool:
+    """
+    面白い分数であるか判断する。（Project Euler Problem 33を参照）
+        True  -> 面白い分数である
+        False -> 面白い分数でない
+    """
     # 0 除算のチェック
     if div_mother <= 0 or div_mother_fny <= 0:
         return False
 
     # 自明な分数か判断する
-    if judge_reduction_of_fraction(div_child, div_mother, div_child_fny, div_mother_fny):
+    if judge_reduction_of_fraction(
+        div_child, div_mother, div_child_fny, div_mother_fny
+    ):
         return False
 
     # 分数比較
@@ -65,13 +76,18 @@ def judge_funny_fraction(div_child: int, div_mother: int,
         return True
     return False
 
-def judge_reduction_of_fraction(div_child: int, div_mother: int,
-                            div_child_fny: int, div_mother_fny: int, ) -> bool:
-    '''
-        自明な分数であるか判断する。（Project Euler Problem 33を参照）
-            True  -> 自明な分数である
-            False -> 自明な分数でない
-    '''
+
+def judge_reduction_of_fraction(
+    div_child: int,
+    div_mother: int,
+    div_child_fny: int,
+    div_mother_fny: int,
+) -> bool:
+    """
+    自明な分数であるか判断する。（Project Euler Problem 33を参照）
+        True  -> 自明な分数である
+        False -> 自明な分数でない
+    """
     # 0 除算のチェック
     if div_mother <= 0 or div_mother_fny <= 0:
         return False
@@ -82,5 +98,6 @@ def judge_reduction_of_fraction(div_child: int, div_mother: int,
 
     return False
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_33())

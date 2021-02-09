@@ -1,6 +1,6 @@
 import re
 
-mammoth = '''\
+mammoth = """\
     We have seen three, queen of cheese,
     Lying quietly at your ease,
     Gently fanned by evening breeze,
@@ -30,7 +30,7 @@ mammoth = '''\
     You'd cast a shade even at noon,
     Folks would think it was the moon
     About to fall and crush them soon.
-    '''
-mammoth = re.sub(' +',' ',mammoth)    #上記文字列の複数半角スペースを1つに変換
+    """
+mammoth = re.sub(" +", " ", mammoth)  # 上記文字列の複数半角スペースを1つに変換
 
-print(re.findall(r'\b\w*[aiueo]{3}\w*\b', mammoth))
+print(re.findall(r"\b\w*[aiueo]{3}\w*\b", mammoth))

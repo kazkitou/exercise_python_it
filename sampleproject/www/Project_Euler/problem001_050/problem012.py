@@ -1,7 +1,8 @@
-'''Project Euler Problem 12'''
+"""Project Euler Problem 12"""
+
 
 def problem_12() -> int:
-    '''Highly divisible triangular number'''
+    """Highly divisible triangular number"""
     tri_cnt = 1
     tri_num = 0
     while True:
@@ -11,8 +12,9 @@ def problem_12() -> int:
         tri_cnt += 1
     return tri_num
 
+
 def get_division_count(num: float) -> int:
-    '''
+    """
     素因数分解を行い、各因子の個数を求める。
     自然数は必ず素数の掛け算で表現できる？
         input
@@ -21,7 +23,7 @@ def get_division_count(num: float) -> int:
         output
             ret -> numの約数の個数を求めるアルゴリズムに従う
                 (P1の乗数+1) * (P2の乗数+1) * (P2の乗数+1) * ... * (Pnの乗数+1)
-    '''
+    """
     ret = 1
     div_val = 2
     tmp = num
@@ -34,5 +36,6 @@ def get_division_count(num: float) -> int:
         div_val += 1
     return ret
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_12())

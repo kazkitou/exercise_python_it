@@ -2,8 +2,10 @@ import multiprocessing
 import os
 import time
 
+
 def whoami(name):
     print("I'm {}, in process {}".format(name, os.getpid()))
+
 
 def loopy(name):
     whoami(name)
@@ -12,6 +14,7 @@ def loopy(name):
     for num in range(start, stop):
         print("\tNumber {} of {}. Honk!".format(num, stop))
         time.sleep(1)
+
 
 if __name__ == "__main__":
     whoami("main")

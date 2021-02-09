@@ -1,6 +1,7 @@
-elm_list = {'name':'Hydrogen', 'symbol':'H', 'number':1}
+elm_list = {"name": "Hydrogen", "symbol": "H", "number": 1}
 
-class Elements():
+
+class Elements:
     def __init__(self, name, symbol, number):
         self.name = name
         self.symbol = symbol
@@ -8,6 +9,7 @@ class Elements():
 
     def dump(self):
         print(self.name, self.symbol, self.number)
+
 
 hydrogen = Elements(**elm_list)
 hydrogen.dump()

@@ -1,11 +1,11 @@
-cats = ['Henri', 'Grumpy', 'Lucy']
+cats = ["Henri", "Grumpy", "Lucy"]
 octopi = {}
 emus = {}
 
-animals = {'cats':cats, 'octopi':octopi, 'emus':emus}
+animals = {"cats": cats, "octopi": octopi, "emus": emus}
 plants = {}
 other = {}
 
-life = {'animals':animals, 'plants':plants, 'other':other}
+life = {"animals": animals, "plants": plants, "other": other}
 
-print(life['animals']['cats'])
+print(life["animals"]["cats"])

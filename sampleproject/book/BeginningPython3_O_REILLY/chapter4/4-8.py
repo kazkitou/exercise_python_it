@@ -1,3 +1,5 @@
-def good() :
-    return ['Harry', 'Ron', 'Hermione']
+def good():
+    return ["Harry", "Ron", "Hermione"]
+
+
 print(good())

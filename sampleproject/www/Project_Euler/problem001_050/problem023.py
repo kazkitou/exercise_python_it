@@ -1,7 +1,8 @@
-'''Project Euler Problem 23'''
+"""Project Euler Problem 23"""
+
 
 def problem_23() -> int:
-    '''Non-abundant sums'''
+    """Non-abundant sums"""
     # 過剰数のリストを作成する
     abundant_num_list = []
     for num in range(1, 28123):
@@ -24,16 +25,18 @@ def problem_23() -> int:
 
     return ret
 
+
 def judge_abundant_number(num: int) -> bool:
-    '''
-        過剰数かどうか判断する。
-            True  -> 過剰数である
-            False -> 過剰数でない
-    '''
-    sum_div_num = sum(filter(lambda cnt : num % cnt == 0, range(1, num)))
+    """
+    過剰数かどうか判断する。
+        True  -> 過剰数である
+        False -> 過剰数でない
+    """
+    sum_div_num = sum(filter(lambda cnt: num % cnt == 0, range(1, num)))
     if sum_div_num > num:
         return True
     return False
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_23())

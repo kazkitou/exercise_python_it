@@ -1,3 +1,3 @@
 import shutil
 
-shutil.copy('oops.txt', 'ohno.txt')
+shutil.copy("oops.txt", "ohno.txt")

@@ -1,7 +1,8 @@
-'''Project Euler Problem 16'''
+"""Project Euler Problem 16"""
+
 
 def problem_16() -> int:
-    '''Power digit sum'''
+    """Power digit sum"""
     num = 1
     cnt = 0
     while cnt < 1000:
@@ -15,5 +16,6 @@ def problem_16() -> int:
 
     return ret
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_16())

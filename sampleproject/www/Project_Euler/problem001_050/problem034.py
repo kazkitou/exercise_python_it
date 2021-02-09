@@ -1,7 +1,8 @@
-'''Project Euler Problem 34'''
+"""Project Euler Problem 34"""
+
 
 def problem_34() -> int:
-    '''Digit factorials'''
+    """Digit factorials"""
     # 最大数は9!を桁数分加算した値となる（9! = 362880）
     # 6桁 [ 0 ~   999999] -> 9! * 6 = 2177280
     # 7桁 [ 0 ~  9999999] -> 9! * 7 = 2540160
@@ -9,7 +10,7 @@ def problem_34() -> int:
     # そのため調査する最大値は7桁で最大となる値までとなる。
     # 1!と2!は総和に含めてはならないため、最小値は3!となる。
     ret = 0
-    for i in range(3, 2540160+1):
+    for i in range(3, 2540160 + 1):
         check_kaijo = 0
         for num_char in str(i):
             check_kaijo += get_num_kaijo_special(int(num_char))
@@ -17,10 +18,11 @@ def problem_34() -> int:
             ret += i
     return ret
 
+
 def get_num_kaijo_special(num: int) -> int:
-    '''
-        引数numの階乗の値を返す
-    '''
+    """
+    引数numの階乗の値を返す
+    """
     kaijo = 1
     # 0! = 1
     if num == 0:
@@ -32,5 +34,6 @@ def get_num_kaijo_special(num: int) -> int:
         kaijo *= i
     return kaijo
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(problem_34())

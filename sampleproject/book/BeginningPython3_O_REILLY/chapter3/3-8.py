@@ -1,2 +1,2 @@
-surprise = ['Groucho', 'Chico', 'Harpo']
+surprise = ["Groucho", "Chico", "Harpo"]
 print(surprise)

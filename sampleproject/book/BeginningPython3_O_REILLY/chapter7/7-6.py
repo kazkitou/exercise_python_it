@@ -1,6 +1,6 @@
 import re
 
-letter = '''\
+letter = """\
     Dear {salutation} {name},
 
     Thank you for your letter. \
@@ -15,10 +15,20 @@ letter = '''\
     Sincerely,
     {spokesman}
     {job_title}
-    '''
-letter = re.sub(' +',' ',letter)    #上記文字列の複数半角スペースを1つに変換
+    """
+letter = re.sub(" +", " ", letter)  # 上記文字列の複数半角スペースを1つに変換
 
-response = {'salutation':'salutation', 'name':'name', 'product':'product', 'verbed':'verbed',\
-    'room':'room', 'animals':'animals', 'amount':'amount', 'percent':'percent', 'spokesman':'spokesman', 'job_title':'job_title'}
+response = {
+    "salutation": "salutation",
+    "name": "name",
+    "product": "product",
+    "verbed": "verbed",
+    "room": "room",
+    "animals": "animals",
+    "amount": "amount",
+    "percent": "percent",
+    "spokesman": "spokesman",
+    "job_title": "job_title",
+}
 
 print(letter.format(**response))

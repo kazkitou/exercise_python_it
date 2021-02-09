@@ -1,6 +1,6 @@
 import re
 
-letter = '''\
+letter = """\
     Dear {salutation} {name},
 
     Thank you for your letter. \
@@ -15,6 +15,6 @@ letter = '''\
     Sincerely,
     {spokesman}
     {job_title}
-    '''
-letter = re.sub(' +',' ',letter)
+    """
+letter = re.sub(" +", " ", letter)
 print(letter)
