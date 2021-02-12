@@ -19,8 +19,8 @@ def get_diagonal_number(side: int) -> list():
     """一辺が引数{side}の四角形の角の値を返す"""
     if side == 1:
         return list([1])
-    max_side = side**2
-    sub = side -1
+    max_side = side ** 2
+    sub = side - 1
     return [max_side, max_side - sub, max_side - 2 * sub, max_side - 3 * sub]
 
 
@@ -36,7 +36,7 @@ def judge_prim_number(num: int) -> bool:
         True  -> 素数である
         False -> 素数でない
     """
-    for i in range(2, int(math.sqrt(num))+1):
+    for i in range(2, int(math.sqrt(num)) + 1):
         if num % i == 0:
             return False
     return True
