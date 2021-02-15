@@ -1,4 +1,4 @@
-"""Project Euler Problem 57"""
+"""Project Euler Problem 58"""
 import itertools
 import math
 
