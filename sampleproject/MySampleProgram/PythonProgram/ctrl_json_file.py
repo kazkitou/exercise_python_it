@@ -1,6 +1,6 @@
 """ JSONファイル読み書き """
 import json
-import my_decorators
+from . import my_decorators
 
 
 @my_decorators.my_decorator_func_s_r_e

@@ -1,5 +1,7 @@
-import pytest
-from ..Project_Euler import problem009
+import pytest, sys, pathlib
+sys.path.append(str(pathlib.Path("C:\\Users\\jas-kaito\\Documents\\my_git\\exercise_python_it")))
+
+from sampleproject.www.Project_Euler.problem001_050 import problem009
 
 
 def test_func1():
