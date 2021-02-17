@@ -1,6 +1,17 @@
 import pathlib
 import re
 
+# ディレクトリの基本構成
+# (project) の部分は開発する Python プログラムの名前
+#
+# (project)
+# ├── (project)  ............ プログラムのソースコードディレクトリ
+# │  ├── __init__.py
+# │  └── *.py
+# └── tests  ................ 単体テストのソースコードディレクトリ
+#    ├── __init__.py
+#    └── *.py
+
 _pytest_root_path = "tests\\"
 _pytest_first_filename = "\\test_"
 
