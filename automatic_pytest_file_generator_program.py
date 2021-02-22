@@ -72,7 +72,7 @@ def read_pytest_data(target_file: pathlib.Path) -> list:
         for r_line in file_py.readlines():
             r_data = r_line.split()
             if len(r_data) > 0 and r_data[0] == "def":
-                func_name_list.extend(re.findall("(.*)(", r_data[1]))
+                func_name_list.extend(re.findall("(.*)\(", r_data[1]))
     return func_name_list
 
 
@@ -87,8 +87,8 @@ def write_pytest_data(pytest_file: pathlib.Path, write_list: list) -> None:
             for pytest_func in write_list[4:]:
                 w_file.write("def test_{}():\n".format(pytest_func))
                 w_file.write("    pass\n\n\n")
-            w_file.write('if __name__ == "__main__":')
-            w_file.write("    pass\n\n")
+            w_file.write('if __name__ == "__main__":\n')
+            w_file.write("    pass\n")
 
 
 if __name__ == "__main__":
