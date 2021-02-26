@@ -1,7 +1,6 @@
-import pytest, sys, pathlib
-if not str(pathlib.Path.cwd()) in sys.path:
-    sys.path.append(str(pathlib.Path.cwd()))
+import pytest
 from sampleproject.www.pytest import test_problem009
+
 
 def test_test_func1():
     pass
@@ -31,3 +30,5 @@ def test_test_func7():
     pass
 
 
+if __name__ == "__main__":
+    pass

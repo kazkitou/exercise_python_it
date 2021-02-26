@@ -9,10 +9,7 @@ class args_class:
         INVALID_INTEGER = enum.auto()
         UNEXPECTED_ARGUMENT = enum.auto()
 
-    def __init__(self, schema, args) -> None:
-        self.schema = schema
-        self.args = [arg for arg in args]
-        self.valid = self.parse()
+    def __init__(self, schema, *args) -> None:
         self.unexpectedArguments = set()
         self.boolean_args = dict()
         self.string_args = dict()
@@ -22,6 +19,10 @@ class args_class:
         self.error_argument_id = "\0"
         self.error_parameter = "TILT"
         self.error_code = self.ErroeCode.OK
+
+        self.schema = schema
+        self.args = [arg for arg in args]
+        self.valid = self.parse()
         if self.valid != True:
             raise self.args_exception
 
@@ -57,7 +58,9 @@ class args_class:
 
     def validate_schema_element_id(self, element_id: str) -> None:
         if not element_id.isalpha():
-            raise ValueError("不正な文字： {} が、次の書式に含まれています： {}".format(element_id, self.schema), 0)
+            raise ValueError(
+                "不正な文字： {} が、次の書式に含まれています： {}".format(element_id, self.schema), 0
+            )
 
     def parse_boolean_schema_element(self, element_id: str) -> None:
         self.boolean_args[element_id] = False
@@ -167,7 +170,9 @@ class args_class:
         elif self.error_code == self.ErroeCode.MISSING_STRING:
             return "次の引数のため文字列引数が見つかりません -{}。".format(self.error_argument_id)
         elif self.error_code == self.ErroeCode.INVALID_INTEGER:
-            return "引数 -{} には整数が指定されるべきですが、{} が指定されました。".format(self.error_argument_id, self.error_parameter)
+            return "引数 -{} には整数が指定されるべきですが、{} が指定されました。".format(
+                self.error_argument_id, self.error_parameter
+            )
         elif self.error_code == self.ErroeCode.MISSING_INTEGER:
             return "次のパラメータの整数引数が見つかりません {}。".format(self.error_argument_id)
         return ""

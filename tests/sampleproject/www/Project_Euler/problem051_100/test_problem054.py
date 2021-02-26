@@ -1,7 +1,6 @@
-import pytest, sys, pathlib
-if not str(pathlib.Path.cwd()) in sys.path:
-    sys.path.append(str(pathlib.Path.cwd()))
+import pytest
 from sampleproject.www.Project_Euler.problem051_100 import problem054
+
 
 def test_get_poker_hands_no_role():
     pass
@@ -55,3 +54,9 @@ def test_get_poker_hands():
     pass
 
 
+def test_get_poker_hands_info():
+    pass
+
+
+if __name__ == "__main__":
+    pass

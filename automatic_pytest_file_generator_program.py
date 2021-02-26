@@ -53,11 +53,9 @@ def create_pytest_file(target_file: pathlib.Path) -> None:
         write_list = read_pytest_data(target_file)
         # import の設定
         if write_list != list():
-            write_list.insert(0, "import pytest, sys, pathlib")
-            write_list.insert(1, "if not str(pathlib.Path.cwd()) in sys.path:")
-            write_list.insert(2, "    sys.path.append(str(pathlib.Path.cwd()))")
+            write_list.insert(0, "import pytest")
             write_list.insert(
-                3,
+                1,
                 "from {} import {}".format(
                     str(target_file.parent).replace("\\", "."), target_file.stem
                 ),
@@ -80,11 +78,9 @@ def write_pytest_data(pytest_file: pathlib.Path, write_list: list) -> None:
     """pytest用ファイルを作成する"""
     if write_list != list():
         with pytest_file.open(mode="wt", encoding="utf-8") as w_file:
-            w_file.write("{}\n\n".format(write_list[0]))
-            w_file.write("{}\n".format(write_list[1]))
-            w_file.write("{}\n".format(write_list[2]))
-            w_file.write("{}\n\n\n".format(write_list[3]))
-            for pytest_func in write_list[4:]:
+            w_file.write("{}\n".format(write_list[0]))
+            w_file.write("{}\n\n\n".format(write_list[1]))
+            for pytest_func in write_list[2:]:
                 w_file.write("def test_{}():\n".format(pytest_func))
                 w_file.write("    pass\n\n\n")
             w_file.write('if __name__ == "__main__":\n')
